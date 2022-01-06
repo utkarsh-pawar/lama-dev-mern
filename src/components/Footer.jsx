@@ -9,9 +9,13 @@ import MapIcon from "@mui/icons-material/Map";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import payment from "../assets/payment.png";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -41,6 +45,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const Title = styled.h3`
@@ -61,6 +68,9 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    backgroundColor: "#c4c4c4",
+  })}
 `;
 
 const ContactItem = styled.div`
